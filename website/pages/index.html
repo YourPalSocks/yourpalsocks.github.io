@@ -12,17 +12,17 @@
         </div>
             
         <div class="col-sm-5">
-            <img id="needs-box" src="{{ url_for('static', filename='media/me.gif') }}" class="d-block p-2 text-center" width="50%" min-height="20%" style="display: block; margin: auto;">
+            <img id="needs_box" src="{{ url_for('static', filename='media/me.gif') }}" class="d-block p-2 text-center" width="50%" min-height="20%" style="display: block; margin: auto;">
         </div>
     </div>
 
     <div class="row align-items-center">
         <div class="col m-4" style="max-width: 182px;">
-            <button type="button" class="btn btn-outline-primary rounded-pill px-5"><strong>My Work</strong></button>
+            <a href="{{ url_for('pages', page='projects') }}"><button type="button" class="btn btn-outline-primary rounded-pill px-5"><strong>My Work</strong></button></a>
         </div>
 
         <div class="col m-4" style="max-width: 182px;">
-            <button type="button" class="btn btn-outline-primary rounded-pill px-5"><strong>Resume</strong></button>
+            <a href="{{ url_for('pages', page='resume') }}"><button type="button" class="btn btn-outline-primary rounded-pill px-5"><strong>Resume</strong></button></a>
         </div>
     </div>
 

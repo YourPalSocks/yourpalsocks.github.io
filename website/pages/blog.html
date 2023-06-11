@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <!-- Custom CSS sheet for blog things -->
+    <link href="{{ url_for('static', filename='blog-styles.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="row h-20 m-3">
+        <div class="row my-4">
+            <h2 class="my-5"><span id=special-e>B</span>log.</h2>
+            <p>
+                My musings on different tech or creative-related topics.
+            </p>
+        </div>
+        <!-- Blog blocks start here-->
+        <div class="row my-4" id="blog_block">
+            <p id="use_prim_text" class="col-sm-8">I dunno man<span class="badge mx-2" id="dnd">TAG</span><span class="badge mx-2" id="tech">TAG</span></p> <!-- Title and tags here -->
+            <p class="w-30 col-sm-2">6/11/2023</p> <!-- Date here -->
+            <a href="{{ url_for('blog_page', page='sample-blog')}}"><p>CLICK HERE >></p></a>
+        </div>
+        <div class="row my-4" id="blog_block">
+            <p id="use_prim_text" class="col-sm-8">I dunno man<span class="badge mx-2" id="tech">TAG</span></p> <!-- Title and tags here -->
+            <p class="w-30 col-sm-2">6/11/2023</p> <!-- Date here -->
+            <p>CLICK HERE >></p>
+        </div>
+    </div>
+
+    <script>
+        // Little script to replace tag text so I don't have to do it twice
+        tags = document.getElementsByClassName("badge");
+        for(var i = 0; i < tags.length; i++)
+        {
+            if(tags[i].id == "dnd")
+            {
+                tags[i].textContent = "D&D";
+            }
+            else if(tags[i].id == "tech")
+            {
+                tags[i].textContent = "TECH";
+            }
+        }
+    </script>
+{% endblock %}

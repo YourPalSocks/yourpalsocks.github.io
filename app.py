@@ -24,9 +24,13 @@ def serve():
 def home():
     return render_template('pages/index.html')
 
-@app.route('/<pages>')
+@app.route('/<page>')
 def pages(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
+
+@app.route('/blog/<page>')
+def blog_page(page):
+    return render_template(str(Path('blog_pages')) + '/' + page.lower() + '.html')
 
 if __name__ == "__main__":
     app.run(port=8080)

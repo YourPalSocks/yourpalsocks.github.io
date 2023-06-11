@@ -1,8 +1,34 @@
-<div class="row flex-nowrap">
-    <div id="sidebar" class="w-50 px-0">
-        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-            
+<!--Desktop version (sidebar)-->
+<div class="row flex-nowrap d-none d-lg-flex">
+    <div id="sidebar" class="col w-10 px-0">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-0 pt-2 min-vh-100">
+            <!--Sidebar logo thing-->
+            <div id="navbar_icon" class ="d-flex flex-row align-self-center justify-content-center align-items-center mx-0 my-3">
+                <a href="{{ url_for('home') }}"><p id="icon_text"><strong>.eh()</strong></p></a>
+            </div>
+            <ul class="justify-content-center mx-4 my-5">
+                <li class="nav-item py-4">
+                    <a href="{{ url_for('home') }}"><p id="sidebar_item">Home</p></a>
+                </li>
+                <li class="nav-item py-4">
+                    <a href="{{ url_for('pages', page='projects') }}"><p id="sidebar_item">Projects</p></a>
+                </li>
+                <li class="nav-item py-4">
+                    <a href="{{ url_for('pages', page='resume') }}"><p id="sidebar_item">Resume</p></a>
+                </li>
+                <li class="nav-item py-4">
+                    <a href="{{ url_for('pages', page='contact') }}"><p id="sidebar_item">Contact</p></a>
+                </li>
+                <li class="nav-item py-4">
+                    <a href="{{ url_for('pages', page='blog') }}"><p id="sidebar_item">Blog</p></a>
+                </li>
+            </ul>
         </div>
     </div>
-    <div id="sidebar_acc" class="px-0"></div>
+    <div class="col h-100" id="sidebar_acc"></div>
+</div>
+
+<!--Mobile version (collapse top bar)-->
+<div class="row flex-nowrap d-none d-sm-flex">
+
 </div>
