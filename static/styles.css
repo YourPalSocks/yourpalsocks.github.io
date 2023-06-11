@@ -1,0 +1,77 @@
+:root {
+    /* Color Palette */
+    --primary-color: #673AB7;
+    --dark-primary: #512DA8;
+    --light-primary: #D1C4E9;
+    --accent-color: #E040FB;
+    --bg-color: #141414;
+    --primary-text: #FFFFFF;
+    --secondary-text: #757575;
+    --div: #000000;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+}
+
+#needs-box {
+    background-color: var(--div);
+    border-radius: 25px;
+}
+
+#sm_icon {
+    max-width: 5em;
+    display: block;
+    height: auto;
+}
+
+#social_buttons {
+    width: 40%;
+}
+
+#sidebar {
+    background-color: var(--primary-color);
+}
+
+#sidebar_acc {
+    width: 5px;
+    background-color: var(--accent-color);
+}
+
+@media only screen and (max-device-width: 576px) {
+    #social_buttons {
+        width: 100%;
+    }
+
+    #sm_icon {
+        max-width: 2em;
+        display: block;
+        height: auto;
+    }
+}
+
+h2 {
+    font-size: 72px;
+}
+
+p {
+    color: var(--secondary-text);
+    font-size: 20px;
+}
+
+#special-e {
+    color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-text);
+    border-color: var(--primary-color);
+    border-width: 0.7em;
+    white-space: nowrap;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--dark-primary);
+    border-color: var(--primary-color);
+}
