@@ -1,9 +1,6 @@
 :root {
     /* More color codes */
     --block: #000000;
-    /* Badge colors */
-    --dnd: #d60000;
-    --tech: #0d00ff;
 }
 
 #blog_block {
@@ -14,18 +11,15 @@
     margin-left: 24px;
 }
 
+
+#blog_content {
+    line-height: 2.5;
+}
+
 @media only screen and (max-device-width: 576px) {
     #blog_block {
         width: 90%;
         margin-left: 0px;
         margin-right: 0px;
     }
-}
-
-#dnd {
-    background-color: var(--dnd);
-}
-
-#tech {
-    background-color: var(--tech);
 }

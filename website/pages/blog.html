@@ -16,30 +16,16 @@
         </div>
         <!-- Blog blocks start here-->
         <div class="row my-4" id="blog_block">
-            <p id="use_prim_text" class="col-sm-8">I dunno man<span class="badge mx-2" id="dnd">TAG</span><span class="badge mx-2" id="tech">TAG</span></p> <!-- Title and tags here -->
+            <p id="use_prim_text" class="col-sm-8">My 5E Encounter Tracker<span class="badge mx-2" id="dnd">TAG</span><span class="badge mx-2" id="tech">TAG</span></p> <!-- Title and tags here -->
             <p class="w-30 col-sm-2">6/11/2023</p> <!-- Date here -->
-            <a href="{{ url_for('blog_page', page='sample-blog')}}"><p>CLICK HERE >></p></a>
+            <a href="{{ url_for('blog_page', page='5e-encounter-art')}}"><p>CLICK HERE >></p></a>
         </div>
         <div class="row my-4" id="blog_block">
-            <p id="use_prim_text" class="col-sm-8">I dunno man<span class="badge mx-2" id="tech">TAG</span></p> <!-- Title and tags here -->
+            <p id="use_prim_text" class="col-sm-8">A super long title to see how this looks on desktop and mobile<span class="badge mx-2" id="coc">TAG</span><span class="badge mx-2" id="games">TAG</span></p> <!-- Title and tags here -->
             <p class="w-30 col-sm-2">6/11/2023</p> <!-- Date here -->
             <p>CLICK HERE >></p>
         </div>
     </div>
 
-    <script>
-        // Little script to replace tag text so I don't have to do it twice
-        tags = document.getElementsByClassName("badge");
-        for(var i = 0; i < tags.length; i++)
-        {
-            if(tags[i].id == "dnd")
-            {
-                tags[i].textContent = "D&D";
-            }
-            else if(tags[i].id == "tech")
-            {
-                tags[i].textContent = "TECH";
-            }
-        }
-    </script>
+    <script src="{{ url_for('static', filename='tag-check.js') }}"></script>
 {% endblock %}

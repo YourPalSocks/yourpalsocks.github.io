@@ -6,7 +6,7 @@
     --accent-color: #E040FB;
     --bg-color: #141414;
     --primary-text: #FFFFFF;
-    --secondary-text: #757575;
+    --secondary-text: #999999;
     --div: #000000;
 }
 
@@ -27,6 +27,10 @@ p {
 
 p a {
     color: var(--accent-color)
+}
+
+footer {
+    margin-top: 50px
 }
 
 #special-e {

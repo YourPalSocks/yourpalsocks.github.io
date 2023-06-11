@@ -1,6 +1,12 @@
-Personal Website
+# Personal Portfolio Website
+A much more robust and scalable website
 
-Tech Stack:
+## Features
+- Easy color palette switching (css variables)
+- Scalable Blog
+- Mobile responsiveness
+
+## Tech Stack:
 - [Bootstrap](https://getbootstrap.com/)
 - [Flask](https://palletsprojects.com/p/flask/)
 - [Flask-Frozen](https://pythonhosted.org/Frozen-Flask/)
