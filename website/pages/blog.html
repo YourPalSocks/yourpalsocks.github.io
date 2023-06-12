@@ -11,20 +11,28 @@
         <div class="row my-4">
             <h2 class="my-5"><span id=special-e>B</span>log.</h2>
             <p>
-                My musings on different tech or creative-related topics.
+                Talking tech, games, art, my projects, and anything in between.
             </p>
         </div>
         <!-- Blog blocks start here-->
-        <div class="row my-4" id="blog_block">
-            <p id="use_prim_text" class="col-sm-8">My 5E Encounter Tracker<span class="badge mx-2" id="dnd">TAG</span><span class="badge mx-2" id="tech">TAG</span></p> <!-- Title and tags here -->
-            <p class="w-30 col-sm-2">6/11/2023</p> <!-- Date here -->
-            <a href="{{ url_for('blog_page', page='5e-encounter-art')}}"><p>CLICK HERE >></p></a>
-        </div>
-        <div class="row my-4" id="blog_block">
-            <p id="use_prim_text" class="col-sm-8">A super long title to see how this looks on desktop and mobile<span class="badge mx-2" id="coc">TAG</span><span class="badge mx-2" id="games">TAG</span></p> <!-- Title and tags here -->
-            <p class="w-30 col-sm-2">6/11/2023</p> <!-- Date here -->
-            <p>CLICK HERE >></p>
-        </div>
+        {% with 
+            title="My 5E Encounter Tracker", 
+            date="6/11/2023", 
+            tags=["dnd", "tech", "new"], 
+            b_pg="5e-encounter-art" 
+        %}
+            {% include "blog-blurb-layout.html" %}
+        {% endwith %}
+
+        {% with 
+            title="Orelore's: Celestial Deficiency", 
+            date="6/12/2023", 
+            tags=["dnd", "art", "new"], 
+            b_pg="5e-encounter-art" 
+        %}
+            {% include "blog-blurb-layout.html" %}
+        {% endwith %}
+        
     </div>
 
     <script src="{{ url_for('static', filename='tag-check.js') }}"></script>

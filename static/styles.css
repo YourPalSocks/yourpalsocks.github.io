@@ -38,7 +38,11 @@ footer {
 }
 
 #use_prim_text {
-    color: var(--primary-text)
+    color: var(--primary-text);
+}
+
+#use_acc_text {
+    color: var(--accent-color);
 }
 
 #needs_box {
@@ -74,6 +78,12 @@ footer {
         margin-left: 0px;
         margin-right: 0px;
         padding: 0px;
+    }
+}
+
+@media only screen and (max-device-width: 576px) {
+    p {
+        font-size: 16px;
     }
 }
 

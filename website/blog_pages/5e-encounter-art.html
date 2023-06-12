@@ -1,41 +1,28 @@
-{% extends "layout.html" %}
+{% extends "blog-layout.html" %}
 
-{% block head %}
-    {{ super() }}
-    <!-- Custom CSS sheet for blog things -->
-    <link href="{{ url_for('static', filename='blog-styles.css') }}" rel="stylesheet">
+{% block title %}
+    My 5E Encounter Tracker
 {% endblock %}
 
-{% block body %}
-    <!-- Title and tags -->
-    <div class="row h-20 m-3">
-        <div class="col my-4">
-            <h2 class="my-5">My 5E Encounter Tracker</h2>
-            <p><span class="badge mx-2" id="dnd">TAG</span><span class="badge mx-2" id="tech">TAG</span></p>
-            <p>6/11/2023</p>
-        </div>
-        <!-- Image -->
-        <div class="col">
-            <img id="needs_box" src="https://upload.wikimedia.org/wikipedia/commons/a/af/D20_icon.png" class="d-block p-2 text-center" width="50%" min-height="20%" style="display: block; margin: auto;">
-            <p class="text-center">Cred: <a href="https://commons.wikimedia.org/wiki/File:D20_icon.png" target="_blank">wikimedia</a></p>
-        </div>
-    </div>
+{% block tags %}
+    <span class="badge mx-2" id="dnd">TAG</span>
+    <span class="badge mx-2" id="tech">TAG</span>
+    <span class="badge mx-2" id="new">TAG</span>
+{% endblock %}
 
-    <!-- Content -->
-    <div class="row h-80 m-4 border">
-        <p id="blog_content">
-            Back in 2020, I built a <a href="https://github.com/YourPalSocks/D-D-Encounter-Tracker">Combat/Encounter Tracker</a> in Java as a small little tool to help me keep track of combat during games.
-            I got into the game around late 2019-ish, and was a DM in full swing months after starting.
-        </p>
-    </div>
+{% block date %}
+    6/11/2023
+{% endblock %}
 
-    <!-- Back Button -->
-    <div class="row align-items-center justify-content-center">
-        <div class="col m-4" style="max-width: 182px;">
-            <a href="{{ url_for('pages', page='blog') }}"><button type="button" class="btn btn-outline-primary rounded-pill px-5"><strong>Back</strong></button></a>
-        </div>
-    </div>
+{% block image %}
+    src="https://upload.wikimedia.org/wikipedia/commons/a/af/D20_icon.png"
+{% endblock %}
 
+{% block image_credit %}
+    <a href="https://commons.wikimedia.org/wiki/File:D20_icon.png" target="_blank">wikimedia</a>
+{% endblock %}
 
-<script src="{{ url_for('static', filename='tag-check.js') }}"></script>
+{% block text_content %}
+    Back in 2020, I built a <a href="https://github.com/YourPalSocks/D-D-Encounter-Tracker">Combat/Encounter Tracker</a> in Java as a small little tool to help me keep track of combat during games.
+    I got into the game around late 2019-ish, and was a DM in full swing months after starting.
 {% endblock %}

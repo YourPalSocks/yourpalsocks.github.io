@@ -1,5 +1,6 @@
 from os import path
 from pathlib import Path
+import sys
 
 from flask import Flask, render_template
 from flask_frozen import Freezer
@@ -7,7 +8,7 @@ from flask_frozen import Freezer
 template_folder = path.abspath('./website')
 
 app = Flask(__name__, template_folder=template_folder)
-app.config['FREEZER_DESTINATION'] = 'public'
+app.config['FREEZER_DESTINATION'] = 'build'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 freezer = Freezer(app)

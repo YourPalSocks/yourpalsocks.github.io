@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <div class="row h-20 m-3">
+    <div class="row h-100 m-3">
         <div class="row my-4">
             <h2 class="my-5"><span id=special-e>P</span>rojects.</h2>
             <p>
@@ -14,6 +14,10 @@
             <p>
                 Game Jams, small projects, and other collections.
             </p>
+            <!-- Extra steps for mobile -->
+            <div class="d-sm-block d-md-none">
+                <p>Tap on a game's icon to go to its download page</p>
+            </div>
         </div>
 
         <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
@@ -55,6 +59,16 @@
                 <p>4 of my games from when I was just learning how to code. Play at your own risk</p>
             </div>
         </div>
+
+        <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
+            <div class="col-4">
+                <a href="https://play.google.com/store/apps/details?id=com.sockPuppets.DigginItWithDrillby&hl=en_US&gl=US"><img src="https://play-lh.googleusercontent.com/6DXtURvgkmsK5AANDbW59obTRc2r9xnQrtz78metc1BRQ4QE9EF7VsPLRxAIXV4PKA=w240-h480" height="173.5px"/></a>
+            </div>
+            <div class="col d-none d-lg-block">
+                <p id="use_prim_text">Diggin' it with Drillby</p>
+                <p>A Flappy Bird inspired infinite runner made for android phones. Available on the <a href="https://play.google.com/store/apps/details?id=com.sockPuppets.DigginItWithDrillby&hl=en_US&gl=US">Google Play Store</a></p>
+            </div>
+        </div>
         
 
         <hr class="hr"/>
@@ -75,7 +89,7 @@
         </div>
         <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
             <p id="use_prim_text">iGEM Wiki</p>
-            <p>A website I helped make for the Wright State iGEM team for the 2023 competition. <strong>COMING SOON</strong></p>
+            <p>A website I helped make for the Wright State iGEM team for the 2023 competition. <strong id="use_acc_text">COMING SOON</strong></p>
         </div>
 
         <hr class="hr"/>
