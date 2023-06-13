@@ -25,11 +25,11 @@ def serve():
 def home():
     return render_template('pages/index.html')
 
-@app.route('/<page>')
+@app.route('/<page>.html')
 def pages(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
 
-@app.route('/blogs/<page>')
+@app.route('/blogs/<page>.html')
 def blog_page(page):
     return render_template(str(Path('blog_pages')) + '/' + page.lower() + '.html')
 
