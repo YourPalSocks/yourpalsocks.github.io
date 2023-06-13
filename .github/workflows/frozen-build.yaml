@@ -5,6 +5,9 @@ on:
     
 permissions:
   actions: write
+  pages: write
+  id-token: write
+  contents: read
 
 # GOALS:
 # 1. Checkout and install python
@@ -51,4 +54,4 @@ jobs:
       with: 
         path: .
     - id: deployment
-      uses: actions/deploy-pages@main
+      uses: actions/deploy-pages@v2
