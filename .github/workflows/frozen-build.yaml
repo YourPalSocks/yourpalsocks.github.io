@@ -32,7 +32,7 @@ jobs:
           tar \
             --dereference --hard-dereference \
             --directory github-pages \
-            --cvf github-pages \
+            -cvf github-pages \
             --exclude=.git \
             --exclude=.github \
             .
