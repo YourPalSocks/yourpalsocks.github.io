@@ -29,7 +29,7 @@ def home():
 def pages(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
 
-@app.route('/blog/<page>')
+@app.route('/blogs/<page>')
 def blog_page(page):
     return render_template(str(Path('blog_pages')) + '/' + page.lower() + '.html')
 
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "build":
         freezer.freeze()
     else:
-        app.run(port=8080)
+        freezer.run()
