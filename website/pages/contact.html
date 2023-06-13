@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="row h-20 m-3">
+        <div class="row my-4">
+            <h2 class="my-5"><span id=special-e>C</span>ontact.</h2>
+            <p>
+                Want me on your team? Use the below to reach out.
+            </p>
+        </div>
+
+        <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
+            <p>Email: ethanMH2002@gmail.com</p>
+        </div>
+
+        <div class="row my-4">
+            <p>
+                I'm also on these platforms:
+            </p>
+        </div>
+
+        <div class="row w-20 mx-6 my-4 justify-content-center" id="social_buttons">
+            <div class="col px-1">
+                <a href="https://www.instagram.com/ethancodesandstuff/" target="_blank">
+                    <img id="sm_icon" src="{{ url_for('static', filename='media/insta.png') }}">
+                </a>
+            </div>
+            <div class="col px-1">
+                <a href="https://github.com/YourPalSocks/" target="_blank">
+                    <img id="sm_icon" src="{{ url_for('static', filename='media/github.png') }}">
+                </a>
+            </div>
+            <div class="col px-1">
+                <a href="https://sock-puppet-studio.itch.io/" target="_blank">
+                    <img id="sm_icon" src="{{ url_for('static', filename='media/itch.png') }}">
+                </a>
+            </div>
+            <div class="col px-1">
+                <a href="https://play.google.com/store/apps/developer?id=Sock+Puppet+Studio" target="_blank">
+                    <img id="sm_icon" src="{{ url_for('static', filename='media/googleplay.png') }}">
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

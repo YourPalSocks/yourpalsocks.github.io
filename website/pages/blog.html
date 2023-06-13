@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <!-- Custom CSS sheet for blog things -->
+    <link href="{{ url_for('static', filename='blog-styles.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="row h-20 m-3">
+        <div class="row my-4">
+            <h2 class="my-5"><span id=special-e>B</span>log.</h2>
+            <p>
+                Talking tech, games, art, my projects, and anything in between.
+            </p>
+        </div>
+        <!-- Blog blocks start here-->
+        {% with 
+            title="My 5E Encounter Tracker", 
+            date="6/11/2023", 
+            tags=["dnd", "tech", "new"], 
+            b_pg="5e-encounter-art" 
+        %}
+            {% include "blog-blurb-layout.html" %}
+        {% endwith %}
+
+        {% with 
+            title="Orelore's: Celestial Deficiency", 
+            date="6/12/2023", 
+            tags=["dnd", "art", "new"], 
+            b_pg="celestial-deficiency-art" 
+        %}
+            {% include "blog-blurb-layout.html" %}
+        {% endwith %}
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='tag-check.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <!-- Custom CSS sheet for blog things -->
+    <link href="{{ url_for('static', filename='blog-styles.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <!-- Title and tags -->
+    <div class="row h-20 m-3">
+        <div class="col my-4">
+            <h2 class="my-5" id="blog_title">{% block title %}The Secret Dusty Page {% endblock %}</h2>
+            <p> {% block tags %} 
+                <span class="badge mx-2" id="games">TAG</span>
+                <span class="badge mx-2" id="new">TAG</span>
+            {% endblock %} </p>
+            <p>{% block date %}x/xx/xxxx{% endblock %}</p>
+        </div>
+        <!-- Image -->
+        <div class="col">
+            <img id="needs_box" {% block image %} src="{{ url_for('static', filename='media/dusty.png') }}" {% endblock %} class="d-block p-2 text-center" width="50%" min-height="20%" style="display: block; margin: auto;">
+            <p class="text-center">
+                Cred: 
+                {% block image_credit %}{% endblock %} </p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="row h-80 m-4 border">
+        <p id="blog_content"> 
+            {% block text_content %}
+            Not sure how you got here. But since you did, enjoy this picture of my cat.
+            {% endblock %}
+        </p>
+    </div>
+
+    <!-- Back Button -->
+    <div class="row align-items-center justify-content-center">
+        <div class="col m-4" style="max-width: 182px;">
+            <a href="{{ url_for('pages', page='blog') }}"><button type="button" class="btn btn-outline-primary rounded-pill px-5"><strong>Back</strong></button></a>
+        </div>
+    </div>
+
+
+<script src="{{ url_for('static', filename='tag-check.js') }}"></script>
+{% endblock %}

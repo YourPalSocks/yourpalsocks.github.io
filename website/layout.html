@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='media/Drillby.ico') }}"/>
+
+        <!-- Built-in CSS stuff -->
+        <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+
+        <!-- Loading Google font stuff -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Menu div-->
+                <div id="menu" class="col-2">
+                    {% include 'menu.html' %}
+                </div>
+                <!-- Content div -->
+                <div class="col">
+                    {% block body %} {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+    </body>
+
+    <footer>
+        {% block footer %} {% endblock %}
+    </footer>
+</html>

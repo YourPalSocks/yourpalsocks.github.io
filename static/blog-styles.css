@@ -1,0 +1,32 @@
+:root {
+    /* More color codes */
+    --block: #000000;
+}
+
+#blog_block {
+    background-color: var(--block);
+    border-radius: 10px;
+    width: 70%;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+#blog_content {
+    line-height: 2.5;
+}
+
+br {
+    margin-bottom: 1em;
+}
+
+@media only screen and (max-device-width: 576px) {
+    #blog_block {
+        width: 90%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #blog_title {
+        font-size: 60px;
+    }
+}
