@@ -15,6 +15,10 @@
     line-height: 2.5;
 }
 
+br {
+    margin-bottom: 1em;
+}
+
 @media only screen and (max-device-width: 576px) {
     #blog_block {
         width: 90%;

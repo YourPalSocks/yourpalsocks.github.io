@@ -8,7 +8,7 @@ from flask_frozen import Freezer
 template_folder = path.abspath('./website')
 
 app = Flask(__name__, template_folder=template_folder)
-app.config['FREEZER_DESTINATION'] = 'build'
+app.config['FREEZER_DESTINATION'] = 'github-pages'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 freezer = Freezer(app)

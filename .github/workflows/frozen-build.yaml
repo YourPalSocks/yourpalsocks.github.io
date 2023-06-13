@@ -6,7 +6,8 @@ on:
 # GOALS:
 # 1. Checkout and install python
 # 2. Install dependencies (frozen-flask should install everything needed)
-# 3. Freeze and upload website build
+# 3. Freeze and zip and prepare for upload
+# 3. Upload website build
 
 jobs:
   build:
@@ -26,8 +27,19 @@ jobs:
           pip install --no-cache-dir -r dependencies.txt
           FLASK_APP=app.py flask freeze
 
+      - name: Zip artifact
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory github-pages \
+            --cvf github-pages \
+            --exclude=.git \
+            --exclude=.github \
+            .
+
+
       - name: Upload build results
         uses: actions/upload-artifact@v3
         with:
           name: website
-          path: build
+          path: github-pages
