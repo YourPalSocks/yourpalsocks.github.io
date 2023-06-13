@@ -28,18 +28,4 @@ jobs:
           python app.py build
 
       - name: Zip artifact
-        run: |
-          tar \
-            --dereference --hard-dereference \
-            --directory github-pages \
-            -cvf github-pages \
-            --exclude=.git \
-            --exclude=.github \
-            .
-
-
-      - name: Upload build results
-        uses: actions/upload-artifact@v3
-        with:
-          name: website
-          path: github-pages
+        uses: actions/upload-pages-artifact
