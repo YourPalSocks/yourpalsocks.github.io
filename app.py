@@ -34,4 +34,7 @@ def blog_page(page):
     return render_template(str(Path('blog_pages')) + '/' + page.lower() + '.html')
 
 if __name__ == "__main__":
-    app.run(port=8080)
+    if len(sys.argv) > 1 and sys.argv[1] == "build":
+        freezer.freeze()
+    else:
+        app.run(port=8080)
