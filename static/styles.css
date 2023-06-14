@@ -60,6 +60,10 @@ footer {
     width: 60%;
 }
 
+#mobile_navbar {
+    background-color: var(--primary-color);
+}
+
 @media only screen and (max-device-width: 810px) {
     #social_buttons {
         width: 100%;
@@ -73,17 +77,24 @@ footer {
 }
 
 @media only screen and (max-device-width: 576px) {
+    p {
+        font-size: 16px;
+    }
+
     #pdf_viewer {
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
         padding: 0px;
     }
-}
 
-@media only screen and (max-device-width: 576px) {
-    p {
-        font-size: 16px;
+    #icon_text {
+        font-size: 0.3em;
+        background-color: var(--dark-primary);
+    }
+
+    #nav_link {
+        color: var(--primary-text)
     }
 }
 

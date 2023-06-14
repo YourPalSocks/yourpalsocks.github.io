@@ -29,4 +29,8 @@ br {
     #blog_title {
         font-size: 60px;
     }
+
+    #blog_content {
+        font-size: 16px;
+    }
 }
