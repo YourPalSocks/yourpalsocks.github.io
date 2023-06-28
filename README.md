@@ -14,4 +14,4 @@ A much more robust and scalable website
 
 See it live at [my website](https://yourpalsocks.github.io/)
 
-Overhaul status: **NOT LIVE**
+Overhaul status: **LIVE**
