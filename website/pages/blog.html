@@ -14,12 +14,13 @@
                 Talking tech, games, art, my projects, and anything in between.
             </p>
         </div>
-        <!-- Blog blocks start here-->
+        <!-- Blog blocks start here (newest at top)-->
+
         {% with 
-            title="My 5E Encounter Tracker", 
-            date="6/11/2023", 
-            tags=["dnd", "tech", "new"], 
-            b_pg="5e-encounter-art" 
+            title="Wild Night: Jurassic Park of Horror", 
+            date="6/12/2023", 
+            tags=["coc", "art"],
+            b_pg="wild-night-art" 
         %}
             {% include "blog-blurb-layout.html" %}
         {% endwith %}
@@ -27,8 +28,17 @@
         {% with 
             title="Orelore's: Celestial Deficiency", 
             date="6/12/2023", 
-            tags=["dnd", "art", "new"], 
+            tags=["dnd", "art"],
             b_pg="celestial-deficiency-art" 
+        %}
+            {% include "blog-blurb-layout.html" %}
+        {% endwith %}
+
+        {% with 
+            title="My 5E Encounter Tracker", 
+            date="6/11/2023", 
+            tags=["dnd", "tech"], 
+            b_pg="5e-encounter-art" 
         %}
             {% include "blog-blurb-layout.html" %}
         {% endwith %}
