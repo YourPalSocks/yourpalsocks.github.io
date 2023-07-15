@@ -60,15 +60,15 @@
             </div>
         </div>
 
-        <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
-            <div class="col-4">
-                <a href="https://play.google.com/store/apps/details?id=com.sockPuppets.DigginItWithDrillby&hl=en_US&gl=US"><img src="https://play-lh.googleusercontent.com/6DXtURvgkmsK5AANDbW59obTRc2r9xnQrtz78metc1BRQ4QE9EF7VsPLRxAIXV4PKA=w240-h480" height="173.5px"/></a>
-            </div>
-            <div class="col d-none d-lg-block">
-                <p id="use_prim_text">Diggin' it with Drillby</p>
-                <p>A Flappy Bird inspired infinite runner made for android phones. Available on the <a href="https://play.google.com/store/apps/details?id=com.sockPuppets.DigginItWithDrillby&hl=en_US&gl=US">Google Play Store</a></p>
-            </div>
-        </div>
+        {% with 
+            title="Diggin' it with Drillby",
+            proj_img="https://play-lh.googleusercontent.com/6DXtURvgkmsK5AANDbW59obTRc2r9xnQrtz78metc1BRQ4QE9EF7VsPLRxAIXV4PKA=w240-h480",
+            desc="A Flappy Bird inspired infinite runner made for android phones. Available for download on the Google Play Store",
+            proj_link="https://play.google.com/store/apps/details?id=com.sockPuppets.DigginItWithDrillby&hl=en_US&gl=US",
+            link="https://play.google.com/store/apps/details?id=com.sockPuppets.DigginItWithDrillby&hl=en_US&gl=US"
+        %}
+            {% include "project-blurb-layout.html" %}
+        {% endwith %}
         
 
         <hr class="hr"/>
@@ -79,18 +79,28 @@
                 Small utilities and other Github oddities.
             </p>
         </div>
-        <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
-            <p id="use_prim_text">5E Encounter Tracker</p>
-            <p>A Java/Swing program that tracks combat for Dungeons & Dragons 5th edition. <a href="https://github.com/YourPalSocks/D-D-Encounter-Tracker" target="_blank">Link here</a></p>
-        </div>
-        <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
-            <p id="use_prim_text">Aggregation Station</p>
-            <p>Made for the Make-It-Wright Hackathon 2023 in ~48 hours. Creates BarTender labels based on Excel spreadsheets. <a href="https://github.com/YourPalSocks/Make-It-Wright-Hackathon" target="_blank">Link here</a></p>
-        </div>
-        <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
-            <p id="use_prim_text">iGEM Wiki</p>
-            <p>A website I helped make for the Wright State iGEM team for the 2023 competition. <strong id="use_acc_text">COMING SOON</strong></p>
-        </div>
+        {% with 
+            title="5E Encounter Tracker",
+            desc="A Java/Swing program that tracks combat for Dungeons & Dragons 5th edition.",
+            link="https://github.com/YourPalSocks/D-D-Encounter-Tracker"
+        %}
+            {% include "project-blurb-layout.html" %}
+        {% endwith %}
+
+        {% with 
+            title="Aggregation Station",
+            desc="Made for the Make-It-Wright Hackathon 2023 in ~48 hours. Creates BarTender labels based on Excel spreadsheets.",
+            link="https://github.com/YourPalSocks/Make-It-Wright-Hackathon"
+        %}
+            {% include "project-blurb-layout.html" %}
+        {% endwith %}
+
+        {% with 
+            title="iGEM Wiki",
+            desc="A website I helped make for the Wright State iGEM team for the 2023 competition. Link coming soon"
+        %}
+            {% include "project-blurb-layout.html" %}
+        {% endwith %}
 
         <hr class="hr"/>
 
@@ -100,9 +110,13 @@
                 I do writing for TTRPG's like <i>Call of Cthulhu</i> and <i>Dungeons & Dragons</i>. As well as Game Design Documents for my projects.
             </p>
         </div>
-        <div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
-            <p id="use_prim_text">Orelore's Divine Heirarchy</p>
-            <p>A heirarchy of angels and celestials built for Dungeons & Dragons 5th edition. <a href="https://www.notion.so/sock-puppet-studio/Orelore-s-Divine-Hierarchy-bcc3d84777ba4eb88f78844004c80ca1?pvs=4" target="_blank">Link here</a></p>
-        </div>
+
+        {% with 
+            title="Orelore's Divine Heirarchy 😇",
+            desc="A heirarchy of angels and celestials built for Dungeons & Dragons 5th edition.",
+            link="https://www.notion.so/sock-puppet-studio/Orelore-s-Divine-Hierarchy-bcc3d84777ba4eb88f78844004c80ca1?pvs=4"
+        %}
+            {% include "project-blurb-layout.html" %}
+        {% endwith %}
     </div>
 {% endblock %}
