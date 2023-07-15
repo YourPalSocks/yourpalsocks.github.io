@@ -28,11 +28,11 @@
 
     <!-- Content -->
     <div class="row h-80 m-4 border">
+        {% block text_content %}
         <p id="blog_content"> 
-            {% block text_content %}
             Not sure how you got here. But since you did, enjoy this picture of my cat.
-            {% endblock %}
         </p>
+        {% endblock %}
     </div>
 
     <!-- Back Button -->
