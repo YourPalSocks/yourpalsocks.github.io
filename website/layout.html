@@ -5,6 +5,7 @@
         <!-- Meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+        <meta name="keywords" content="Ethan Heinlein">
         <link rel="shortcut icon" href="{{ url_for('static', filename='media/Drillby.ico') }}"/>
 
         <!-- Built-in CSS stuff -->
@@ -16,6 +17,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         {% endblock %}
+
+        <title> {% block title %}{% endblock %} | Ethan Heinlein</title>
     </head>
     <body>
         <div class="container-fluid">
