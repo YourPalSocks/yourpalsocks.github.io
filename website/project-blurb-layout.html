@@ -1,4 +1,4 @@
-<div class="row w-70 m-4 p-2" id="needs_box" style="width: 70%;">
+<div class="row w-70 m-4 p-2 needs_box" style="width: 70%;">
     {% if proj_img is defined and proj_link is defined %}
         <div class="col-4">
             <a href="{{ proj_link }}" target="_blank"><img src="{{ proj_img }}" height="173.5px"/></a>          
@@ -6,7 +6,7 @@
     {% endif %}
     {% if proj_img is defined %}
     <div class="col d-none d-lg-block">
-        <p id="use_prim_text">{{ title }}</p>
+        <p class="use_prim_text">{{ title }}</p>
         <p> {{ desc }} 
             {% if link is defined %}
                 <a href="{{ link }}" target="_blank"> Link here</a> 
@@ -14,8 +14,8 @@
         </p>
     </div>
     {% else %}
-        <div class="row w-70 m-2 p-0" id="needs_box" style="width: 70%;">
-            <p id="use_prim_text">{{ title }}</p>
+        <div class="row w-70 m-2 p-0 needs_box" style="width: 70%;">
+            <p class="use_prim_text">{{ title }}</p>
             <p> {{ desc }} 
             {% if link is defined %}
                 <a href="{{ link }}" target="_blank"> Link here</a> 

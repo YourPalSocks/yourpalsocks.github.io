@@ -3,7 +3,7 @@
     --block: #000000;
 }
 
-#blog_block {
+.blog_block {
     background-color: var(--block);
     border-radius: 10px;
     width: 70%;
@@ -11,7 +11,7 @@
     margin-left: 24px;
 }
 
-#blog_content {
+.blog_content {
     line-height: 2.5;
 }
 
@@ -20,17 +20,17 @@ br {
 }
 
 @media only screen and (max-device-width: 576px) {
-    #blog_block {
+    .blog_block {
         width: 90%;
         margin-left: 0px;
         margin-right: 0px;
     }
 
-    #blog_title {
+    .blog_title {
         font-size: 60px;
     }
 
-    #blog_content {
+    .blog_content {
         font-size: 16px;
     }
 }

@@ -10,7 +10,7 @@
     <!-- Title and tags -->
     <div class="row h-20 m-3">
         <div class="col my-4">
-            <h2 class="my-5" id="blog_title">{% block title %}The Secret Dusty Page {% endblock %}</h2>
+            <h2 class="my-5 blog_title">{% block title %}The Secret Dusty Page {% endblock %}</h2>
             <p> {% block tags %} 
                 <span class="badge mx-2" id="games">TAG</span>
                 <span class="badge mx-2" id="new">TAG</span>
@@ -19,7 +19,7 @@
         </div>
         <!-- Image -->
         <div class="col">
-            <img id="needs_box" {% block image %} src="{{ url_for('static', filename='media/dusty.png') }}" {% endblock %} class="d-block p-2 text-center" width="50%" min-height="20%" style="display: block; margin: auto;">
+            <img {% block image %} src="{{ url_for('static', filename='media/dusty.png') }}" {% endblock %} class="d-block p-2 text-center needs_box" width="50%" min-height="20%" style="display: block; margin: auto;">
             <p class="text-center">
                 Cred: 
                 {% block image_credit %}{% endblock %} </p>
@@ -29,7 +29,7 @@
     <!-- Content -->
     <div class="row h-80 m-4 border">
         {% block text_content %}
-        <p id="blog_content"> 
+        <p class="blog_content"> 
             Not sure how you got here. But since you did, enjoy this picture of my cat.
         </p>
         {% endblock %}

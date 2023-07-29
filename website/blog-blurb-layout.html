@@ -1,5 +1,5 @@
-<div class="row my-4" id="blog_block">
-    <p id="use_prim_text" class="col-sm-8">
+<div class="row my-4 blog_block">
+    <p class="col-sm-8 use_prim_text">
         {{ title }}
         {% for item in tags %}
             <span class="badge mx-2" id="{{ item }}">TAG</span>
@@ -8,5 +8,5 @@
     <p class="w-30 col-sm-2">
         {{ date }}
     </p>
-    <a href="{{ url_for('blog_page', page=b_pg) }}"><p id="use_acc_text">CLICK HERE >></p></a>
+    <a href="{{ url_for('blog_page', page=b_pg) }}"><p class="use_acc_text">CLICK HERE >></p></a>
 </div>

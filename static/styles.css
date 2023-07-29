@@ -33,43 +33,43 @@ footer {
     margin-top: 50px
 }
 
-#special-e {
+.special-e {
     color: var(--primary-color);
 }
 
-#use_prim_text {
+.use_prim_text {
     color: var(--primary-text);
 }
 
-#use_acc_text {
+.use_acc_text {
     color: var(--accent-color);
 }
 
-#needs_box {
+.needs_box {
     background-color: var(--div);
     border-radius: 25px;
 }
 
-#sm_icon {
+.sm_icon {
     max-width: 3em;
     display: block;
     height: auto;
 }
 
-#social_buttons {
+.social_buttons {
     width: 60%;
 }
 
-#mobile_navbar {
+.mobile_navbar {
     background-color: var(--primary-color);
 }
 
 @media only screen and (max-device-width: 810px) {
-    #social_buttons {
+    .social_buttons {
         width: 100%;
     }
 
-    #sm_icon {
+    .sm_icon {
         max-width: 2em;
         display: block;
         height: auto;
@@ -81,19 +81,19 @@ footer {
         font-size: 16px;
     }
 
-    #pdf_viewer {
+    .pdf_viewer {
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
         padding: 0px;
     }
 
-    #icon_text {
+    .icon_text {
         font-size: 0.3em;
         background-color: var(--dark-primary);
     }
 
-    #nav_link {
+    .nav_link {
         color: var(--primary-text)
     }
 }
@@ -117,13 +117,13 @@ footer {
 
 /* Navbar styles */
 
-#sidebar {
+.sidebar {
     background-color: var(--primary-color);
     width: 10%;
     position: fixed;
 }
 
-#sidebar_acc {
+.sidebar_acc {
     width: 5px;
     position: fixed;
     margin-left: 10%;
@@ -131,30 +131,30 @@ footer {
     background-color: var(--accent-color);
 }
 
-#navbar_icon {
+.navbar_icon {
     background-color: var(--dark-primary);
     width: 100%;
     height: 5em;
     text-align: center;
 }
 
-#sidebar_item {
+.sidebar_item {
     font-weight: bold;
     color: var(--primary-text);
 }
 
-#sidebar_item:hover {
+.sidebar_item:hover {
     color: var(--secondary-text);
 }
 
-#icon_text {
+.icon_text {
     font-size: 32px;
     text-align: center;
     color: var(--primary-text);
 }
 
 @media only screen and (max-device-width: 576px) {
-    #menu {
+    .menu {
         width: 0px;
         padding: 0px;
     }

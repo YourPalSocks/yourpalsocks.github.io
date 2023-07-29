@@ -1,37 +1,37 @@
 <!--Desktop version (sidebar)-->
 <div class="row flex-nowrap d-none d-lg-flex">
-    <div id="sidebar" class="col w-10 px-0">
+    <div class="col w-10 px-0 sidebar">
         <div class="d-flex flex-column align-items-center align-items-sm-start px-0 pt-2 min-vh-100">
             <!--Sidebar logo thing-->
-            <div id="navbar_icon" class ="d-flex flex-row align-self-center justify-content-center align-items-center mx-0 my-3">
-                <a href="{{ url_for('home') }}"><p id="icon_text"><strong>EH</strong></p></a>
+            <div class ="d-flex flex-row align-self-center justify-content-center align-items-center mx-0 my-3 navbar_icon">
+                <a href="{{ url_for('home') }}"><p class="icon_text"><strong>EH</strong></p></a>
             </div>
             <ul class="justify-content-center mx-4 my-5">
                 <li class="nav-item py-4">
-                    <a href="{{ url_for('home') }}"><p id="sidebar_item">Home</p></a>
+                    <a href="{{ url_for('home') }}"><p class="sidebar_item">Home</p></a>
                 </li>
                 <li class="nav-item py-4">
-                    <a href="{{ url_for('pages', page='projects') }}"><p id="sidebar_item">Projects</p></a>
+                    <a href="{{ url_for('pages', page='projects') }}"><p class="sidebar_item">Projects</p></a>
                 </li>
                 <li class="nav-item py-4">
-                    <a href="{{ url_for('pages', page='resume') }}"><p id="sidebar_item">Resume</p></a>
+                    <a href="{{ url_for('pages', page='resume') }}"><p class="sidebar_item">Resume</p></a>
                 </li>
                 <li class="nav-item py-4">
-                    <a href="{{ url_for('pages', page='contact') }}"><p id="sidebar_item">Contact</p></a>
+                    <a href="{{ url_for('pages', page='contact') }}"><p class="sidebar_item">Contact</p></a>
                 </li>
                 <li class="nav-item py-4">
-                    <a href="{{ url_for('pages', page='blog') }}"><p id="sidebar_item">Blog</p></a>
+                    <a href="{{ url_for('pages', page='blog') }}"><p class="sidebar_item">Blog</p></a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="col h-100" id="sidebar_acc"></div>
+    <div class="col h-100 sidebar_acc"></div>
 </div>
 
 <!--Mobile version (collapse top bar)-->
-<nav class="d-sm-block d-md-none navbar navbar-expand-sm fixed-top" id="mobile_navbar">
+<nav class="d-sm-block d-md-none navbar navbar-expand-sm fixed-top mobile_navbar">
     <div class="row flex-nowrap">
-        <a class="navbar-brand" id="icon_text" href="{{ url_for('home') }}"><strong>EH</strong></a>
+        <a class="navbar-brand icon_text" href="{{ url_for('home') }}"><strong>EH</strong></a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -40,19 +40,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto left-aligned">
             <li class="nav-item w-100 text-center border" >
-                <a class="nav-link" id="nav_link" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-link nav_link" href="{{ url_for('home') }}">Home</a>
             </li>
             <li class="nav-item w-100 text-center border">
-                <a class="nav-link" id="nav_link" href="{{ url_for('pages', page='projects') }}">Projects</a>
+                <a class="nav-link nav_link" href="{{ url_for('pages', page='projects') }}">Projects</a>
             </li>
             <li class="nav-item w-100 text-center border">
-                <a class="nav-link" id="nav_link" href="{{ url_for('pages', page='resume') }}">Resume</a>
+                <a class="nav-link nav_link" href="{{ url_for('pages', page='resume') }}">Resume</a>
             </li>
             <li class="nav-item w-100 text-center border">
-                <a class="nav-link" id="nav_link" href="{{ url_for('pages', page='contact') }}">Contact</a>
+                <a class="nav-link nav_link" href="{{ url_for('pages', page='contact') }}">Contact</a>
             </li>
             <li class="nav-item w-100 text-center border">
-                <a class="nav-link" id="nav_link" href="{{ url_for('pages', page='blog') }}">Blog</a>
+                <a class="nav-link nav_link" href="{{ url_for('pages', page='blog') }}">Blog</a>
             </li>   
         </ul>
     </div>
