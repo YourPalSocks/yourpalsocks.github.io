@@ -1,1 +1,1 @@
-frozen-flask==0.15
+frozen-flask
