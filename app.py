@@ -26,6 +26,10 @@ def serve():
 def home():
     return render_template('pages/index.html')
 
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('pages/404.html')
+
 @app.route('/<page>.html')
 def pages(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
